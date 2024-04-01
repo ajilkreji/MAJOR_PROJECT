@@ -38,7 +38,7 @@ router.get("/checkqr/:id", async (req, res) => {
       res.json({
         success: true,
       });
-     // console.log("Student exists");
+      console.log("Student exists");
     } else {
       res.json({
         success: false,
