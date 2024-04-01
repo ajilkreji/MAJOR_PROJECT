@@ -32,4 +32,26 @@ module.exports = {
     let institution = await Institution.findOne({ phoneNumber: phone });
     return institution;
   },
+  updateStudent: async (studentId, updatedData) => {
+    try {
+      const updatedStudent = await Student.findByIdAndUpdate(studentId, updatedData, { new: true });
+      return updatedStudent;
+    } catch (error) {
+      console.error("Error updating student:", error);
+      throw error; // Re-throw the error to be caught by the calling function or middleware
+    }
+  },
+  deleteStudentById: async (studentId) => {
+    try {
+      // Find the student by ID and delete
+      const deletedStudent = await Student.findByIdAndDelete(studentId);
+      if (!deletedStudent) {
+        throw new Error("Student not found");
+      }
+      return deletedStudent;
+    } catch (error) {
+      console.error("Error deleting student:", error);
+      throw error; // Re-throw the error to be caught by the calling function or middleware
+    }
+  }
 };

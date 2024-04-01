@@ -1,6 +1,15 @@
+/**
+ * Router for admin API routes.
+ *
+ * Includes routes for:
+ * - Getting all institutions
+ * - Creating a new admin user
+ * - Logging in as admin
+ * - Adding a new institution
+ * - Deleting an institution
+ */
 const express = require("express");
 const router = express.Router();
-//const Admin = require('../schemas/adminSchema');
 const supporter = require("../Supports/adminSupporters");
 
 router.get("/", async (req, res) => {
@@ -9,12 +18,6 @@ router.get("/", async (req, res) => {
     res.json({ institutions });
   }
 });
-/* router.get("/login", (req, res) => {
-  console.log(req.session.loggedIn);
-  if (req.session.loggedIn) {
-    res.json({ success: true });
-  }
-}); */
 router.get("/create", async (req, res) => {
   res.send("hey");
   let username = "hello";
