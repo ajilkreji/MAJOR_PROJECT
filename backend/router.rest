@@ -1,0 +1,30 @@
+//GET http://localhost:5000/admin/
+
+//GET http://localhost:5000/admin/login
+POST http://localhost:5000/institution/student/create
+Content-Type: application/json
+
+{
+     "name": "John Doe",
+    "phoneNumber": "916238568460",
+   "fatherName": "Doe Sr.",
+   "address": "123 Main St, Cityville",
+   "institutionName": "City University",
+   "course": "Computer Science",
+   "travelFrom": "Home City",
+  "travelTo": "University City"
+}
+
+//GET http://localhost:5000/student/check
+//Content-Type: application/json
+
+
+//{
+//  "phoneNumber": "916238568460"
+//}
+
+
+//GET http://localhost:5000/admin/create
+//DELETE  http://localhost:5000/admin/institution/:'653765354a75947511228646'
+
+
